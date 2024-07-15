@@ -8,6 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/ {
+  combos {
+    compatible = "zmk,combos";
+    combo_esc {
+      timeout-ms = <50>;
+      key-positions = <19 20>;
+      bindings = <&kp ESC>;
+    }
+  }
+}
+
 
 / {
         keymap {
@@ -21,8 +32,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &lt 3 Q &lt 1 W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &mt LGUI A &mt LALT S &kp D &lt 1 F &kp G   &kp H &lt 2 J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &lt 1 B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp LCTRL &mt LGUI A &mt LALT S &kp D &lt 1 F &kp G   &kp H &lt 1 J  &kp K     &kp    &kp SEMI &kp SQT
+   &kp LSHFT &mt LCTRL Z &kp X &kp C &kp V &lt 1 B   &kp N &kp M  &kp COMMA &kp DOT &mt RCTRL FSLH &kp ESC
                   &kp LSHFT &kp BSPC &kp TAB   &kp RET &kp SPACE &kp RSHFT
                         >;
                 };
@@ -33,10 +44,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp X  &kp EXCL    &kp AT       &kp LBRC  &kp RBRC       &kp PIPE         &kp MINUS   &kp N7   &kp N8 &kp N9    &kp STAR      &kp X
+   &kp X  &kp HASH    &kp DLLR     &kp LPAR  &kp RPAR       &kp PLUS         &kp PLUS    &kp N4   &kp N5 &kp N6    &kp PLUS      &kp X
+   &kp X  &kp PERCENT &kp CARET    &kp LBKT  &kp RBKT       &kp TILDE        &kp N0      &kp N1   &kp N2 &kp N3    &kp BACKSLASH &kp X
+                                    &trans     &trans       &trans       &trans  &trans   &trans
                         >;
                 };
 
