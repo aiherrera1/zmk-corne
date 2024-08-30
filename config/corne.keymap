@@ -64,11 +64,6 @@
       key-positions = <7 8>;
       bindings = <&kp DQT>;
     };
-    combo_tab {
-      timeout-ms = <50>;
-      key-positions = <3 4>;
-      bindings = <&kp TAB>;
-    }; 
     combo_tmux {
       timeout-ms = <50>;
       key-positions = <16 19>;
