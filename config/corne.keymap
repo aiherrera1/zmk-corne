@@ -81,6 +81,15 @@ macros {
                 , <&macro_release &kp LCTRL>
                 ;
         };
+        tilde_a: tilde_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                ;
+          }
     };
         keymap {
                 compatible = "zmk,keymap";
